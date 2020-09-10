@@ -2,7 +2,7 @@
 @tailwind components;
 
 /*! purgecss start ignore */
-// @import "components/actiontext";
+@import "components/actiontext";
 @import "components/buttons";
 @import "components/forms";
 @import "components/typography";
