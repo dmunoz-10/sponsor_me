@@ -1,0 +1,50 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+Bundler/GemComment:
+  Enabled: false
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+Metrics/LineLength:
+  Max: 100
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Style/Copyright:
+  Enabled: false
+  Notice: 'Copyright (\(c\) )?2020 WithoutPrivacy'
+  AutocorrectNotice: '# Copyright (c) 2020 WithoutPrivacy'
+Style/CollectionMethods:
+  Enabled: true
+Style/AutoResourceCleanup:
+  Enabled: true
+Style/OptionHash:
+  Enabled: true
+Style/SymbolArray:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/RescueModifier:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+AllCops:
+  TargetRubyVersion: 2.7
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+    - '**/*.rb'
+    - '**/*.gemfile'
+    - 'spec/**/*'
+    - 'Gemfile'
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
