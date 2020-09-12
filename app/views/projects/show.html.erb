@@ -1,14 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Donation goal:</strong>
-  <%= @project.donation_goal %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<% if true# @project.active? %>
+  <%= render "active_project", project: @project %>
+<% else %>
+  <%= render "inactive_project", project: @project %>
+<% end %>

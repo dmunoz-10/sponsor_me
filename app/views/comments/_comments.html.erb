@@ -1,0 +1,12 @@
+<p class="text-sm font-semibold text-gray-500 uppercase">Comments</p>
+
+<% commentable.comments.each do |comment| %>
+  <div class="my-4">
+    <div class="p-4 leading-normal border rounded shadow">
+      <div>
+        <strong><%= comment.user.name || comment.user.username %></strong>
+        <%= comment.body %>
+      </div>
+    </div>
+  </div>
+<% end %>
