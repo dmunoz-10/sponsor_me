@@ -1,4 +1,4 @@
-<% if true# @project.active? %>
+<% if @project.active? %>
   <%= render "active_project", project: @project %>
 <% else %>
   <%= render "inactive_project", project: @project %>
