@@ -62,3 +62,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
 gem 'sidekiq', '~> 6.1', '>= 6.1.1'
+gem 'stripe', '~> 5.25'
+gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth-stripe-connect', '~> 2.10', '>= 2.10.1'
