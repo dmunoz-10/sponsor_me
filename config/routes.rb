@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
+  resource :subscription
 
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   root to: 'projects#index'

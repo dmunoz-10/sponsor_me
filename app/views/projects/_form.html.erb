@@ -33,6 +33,26 @@
     <%= form.rich_text_area :description, class: 'input' %>
   </div>
 
+  <div class="my-10">
+    <h3 class="text-3xl">Perks</h3>
+
+    <div data-controller="nested-form">
+      <template data-target="nested-form.template">
+        <%= form.fields_for :perks, Perk.new, child_index: 'TEMPLATE_RECORD' do |perk| %>
+          <%= render 'perk_fields', form: perk %>
+        <% end %>
+      </template>
+
+      <%= form.fields_for :perks do |perk| %>
+        <%= render 'perk_fields', form: perk %>
+      <% end %>
+
+      <div data-target="nested-form.add_perk">
+        <%= link_to 'Add perk', '#', data: { action: 'nested-form#add_association' }, class: 'btn btn-white' %>
+      </div>
+    </div>
+  </div>
+
   <div class="mb-6">
     <%= form.submit class: 'btn btn-default' %>
   </div>

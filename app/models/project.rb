@@ -7,6 +7,8 @@ class Project < ApplicationRecord
 
   belongs_to :user
   has_many :comments, as: :commentable
+  has_many :perks, dependent: :destroy
+  accepts_nested_attributes_for :perks, allow_destroy: true, reject_if: proc { |attr| attr['title'].blank? }
 
   scope :active, -> { where(status: 'active') }
   scope :inactive, -> { where(status: 'inactive') }
